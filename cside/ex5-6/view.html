@@ -1,0 +1,45 @@
+  <!DOCTYPE html>
+  <html lang="en"> <!-- View of the simple chat app -->
+    <head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Chatter</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- Bootstrap library used -->
+	  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.1.css"> <!-- QUnit framework for CSS used -->
+	  <link rel="stylesheet" href="../style.css"> <!-- Custom-made style enhancements -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery library used -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://code.jquery.com/qunit/qunit-2.4.1.js"></script> <!-- QUnit framework for JavaScript used -->
+	  <script src="controller.js"></script> <!-- Controller portion of the script -->
+	  <script src="model.js"></script> <!-- Model portion of the script -->
+	  <script src="unit_tests.js"></script> <!-- Script where the unit tests are performed -->
+	</head>
+	<body>
+	  <div class="container">
+	    <div class="jumbotron text-center">
+		  <h1>Chatter</h1>
+		  <h2>The free simple chat service anyone can participate in.</h2>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Join the conversation!</div>
+			<div class="panel-body">
+				<div class="message pre-scrollable"></div> <!-- The space in which the sent messages will appear. -->
+			</div>
+			<div class="panel-footer">
+				<form class="form-group">
+					<label>Name (25 chars max): </label><input type="text" class="form-control" name="u" maxlength="25" required="true" /> <!-- Name of the user -->
+					<label>Message (200 chars max): </label><input type="text" class="form-control" name="m" maxlength="200" required="true" /></p> <!-- Message the user will send -->
+					<button type="button" class="btn btn-default" onClick="startPost()" disabled>Send</button> <!-- Upon clicking this button, the message will appear in the chat window for everyone else to see. -->
+				</form>
+			</div>
+		</div>
+		<ul class="pagination"> <!-- Direct links to other pages -->
+		  <li><a href="http://188.83.102.174:8080/cside/ex2/view.html">2</a></li>
+		  <li><a href="http://188.83.102.174:8080/cside/ex3/view.html">3</a></li>
+		  <li><a href="http://188.83.102.174:8080/cside/ex4/view.html">4</a></li>
+		  <li class="active"><a href="#">5/6</a></li>
+		</ul>
+		<ol id="qunit-tests"></ol> <!-- Where the unit test results will be shown -->
+	  </div>
+	</body>
+  </html>

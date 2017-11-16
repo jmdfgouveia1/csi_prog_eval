@@ -1,0 +1,50 @@
+ /**
+  * Custom-made CSS style enhancements to the Bootstrap template used by the apps.
+  */
+ .container
+ {
+  color: white;
+  background-color: #B22222;
+  text-align: justify;
+ }
+ 
+ table, .panel
+ {
+  color: black;
+ }
+ 
+ .container>.jumbotron>h1
+ {
+  color: red;
+ }
+ 
+ .container>.jumbotron>h2
+ {
+  color: #B22222;
+ }
+
+ p.headline
+ {
+  font-size: 2em;
+ }
+ 
+ .pagination>li>a {
+  color: #B22222;
+ }
+ 
+ .pagination>li>a:focus, .pagination>li>a:hover {
+  border: 1px solid red;
+  color: #B22222;
+ }
+ 
+ .pagination>li.active>a {
+  border: 1px solid white;
+  background: #B22222;
+  color: #FFFFFF;
+ }
+ 
+ .pagination>li.active>a:focus, .pagination>li.active>a:hover {
+  border: 1px solid red;
+  background: #B22222;
+  color: #FFFFFF;
+ }

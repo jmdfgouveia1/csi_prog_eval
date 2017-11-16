@@ -1,0 +1,36 @@
+  <!DOCTYPE html>
+  <html lang="en"> <!-- View of the Chuck Norris joke app -->
+    <head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>The Chuck Norris Web Application</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- Bootstrap library used -->
+	  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.1.css"> <!-- QUnit framework for CSS used -->
+	  <link rel="stylesheet" href="../style.css"> <!-- Custom-made style enhancements -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery library used -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://code.jquery.com/qunit/qunit-2.4.1.js"></script> <!-- QUnit framework for JavaScript used -->
+	  <script src="controller.js"></script> <!-- Controller portion of the script -->
+	  <script src="model.js"></script> <!-- Model portion of the script -->
+	  <script src="unit_tests.js"></script> <!-- Script where the unit tests are performed -->
+	</head>
+	<body>
+	  <div class="container">
+	    <div class="jumbotron text-center">
+		  <h1>The Chuck Norris Web Application</h1>
+		  <h2>You say you want Chuck Norris jokes? Say no more!</h2>
+		</div>
+	    <div class="panel panel-primary">
+			<div class="panel-body"></div> <!-- Space to fill with each joke. Its content is determined by the app's back-end scripts -->
+		</div>
+		<p><button type="button" class="btn btn-default" onClick="startUpdates()">Get Jokes</button><p> <!-- Pressing this button will activate the process, making the jokes appear -->
+		<ul class="pagination"> <!-- Direct links to other pages -->
+		  <li><a href="http://188.83.102.174:8080/cside/ex2/view.html">2</a></li>
+		  <li class="active"><a href="#">3</a></li>
+		  <li><a href="http://188.83.102.174:8080/cside/ex4/view.html">4</a></li>
+		  <li><a href="http://188.83.102.174:8080/cside/ex5-6/view.html">5/6</a></li>
+		</ul>
+		<ol id="qunit-tests"></ol> <!-- Where the unit test results will be shown -->
+	  </div>
+	</body>
+  </html>

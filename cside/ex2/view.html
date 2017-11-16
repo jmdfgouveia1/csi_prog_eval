@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+  <html lang="en"> <!-- View of the power-to-energy converter app -->
+    <head>
+      <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>The Free Power-to-Energy Converter</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- Bootstrap library used -->
+	  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.1.css"> <!-- QUnit framework for CSS used -->
+	  <link rel="stylesheet" href="../style.css"> <!-- Custom-made style enhancements -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script> <!-- Moment.js library used -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery library used -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://code.jquery.com/qunit/qunit-2.4.1.js"></script> <!-- QUnit framework for JavaScript used -->
+	  <script src="controller.js"></script> <!-- Controller portion of the script -->
+	  <script src="model.js"></script> <!-- Model portion of the script -->
+	  <script src="unit_tests.js"></script> <!-- Script where the unit tests are performed --> 
+    </head>
+    <body>
+	  <div class="container">
+	    <div class="jumbotron text-center">
+	      <h1>The Free Power-to-Energy Converter</h1>
+	      <h2>Convert power readings to energy values in intervals of 15 minutes</h2>
+		</div>
+	    <form>
+	      <p><button type="button" class="btn btn-default" onClick="addAnotherGroup()">Add another power value</button></p> <!-- Pressing this button triggers the input request of one more power value, as well as its respective time and date. -->
+		  <div class="form-group">
+		    <p><label>Date (DD/MM/YYYY): </label><input type="text" class="form-control" name="d" required="true" /></p> <!-- Date of the power reading -->
+		    <p><label>Time (HH:mm:ss): </label><input type="text" class="form-control" name="t" required="true" /></p> <!-- Time when the power reading occurred -->
+		    <p><label>Power reading (in Watts): </label><input type="number" class="form-control" name="power" step="any" min="0" required="true" /></p> <!-- Power value registered during the reading -->
+		  </div>
+		  <button type="button" class="btn btn-default" id="convertButton" onClick="convert()" disabled>Convert</button> <!-- After entering the necessary information, the user may now execute the conversion -->
+	    </form><br>
+	    <table class="table table-striped table-bordered table-condensed">
+          <thead>
+            <tr>
+              <th>Interval Starting Point</th>
+              <th>Interval Ending Point</th>
+			  <th>Energy Value (kWh)</th>
+			</tr>
+		  </thead>
+		  <tbody id="output"></tbody> <!-- Where the output will be generated -->
+		</table>
+		<ul class="pagination"> <!-- Direct links to other pages -->
+		  <li class="active"><a href="#">2</a></li>
+		  <li><a href="http://188.83.102.174:8080/cside/ex3/view.html">3</a></li>
+		  <li><a href="http://188.83.102.174:8080/cside/ex4/view.html">4</a></li>
+		  <li><a href="http://188.83.102.174:8080/cside/ex5-6/view.html">5/6</a></li>
+		</ul>
+		<ol id="qunit-tests"></ol> <!-- Where the unit test results will be shown -->
+	  </div>
+    </body>
+  </html>
