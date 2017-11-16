@@ -4,7 +4,7 @@ Name: João Miguel Dias Ferreira Gouveia
 
 Exercises solved: all of them (2, 3, 4, 5, 6)
 
-Programming languages used: HTML, CSS, JavaScript, PHP, MySQL, JSDoc.
+Languages used: HTML, CSS, JavaScript, PHP, MySQL, JSDoc.
 
 Libraries/frameworks/tools used: Bootstrap, Moment.js, jQuery, QUnit, phpMyAdmin, WampServer (Apache).
 
