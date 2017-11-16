@@ -27,7 +27,7 @@
 	/**
 	 * Function called by the "Convert" button, which retrieves the information from the input fields and calls six other functions.
 	 */
-    function convert() {
+    	function convert() {
 		var d = document.getElementsByName("d");
 		var t = document.getElementsByName("t");
 		var p = document.getElementsByName("power");
